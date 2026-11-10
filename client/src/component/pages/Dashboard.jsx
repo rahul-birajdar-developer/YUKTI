@@ -7,7 +7,7 @@ const Dashboard = () => {
                 <section className="welcome-section">
                     <div>
                         <p className="eyebrow">YUKTI STUDENT WORKSPACE</p>
-                        <h1>Welcome back, Rahul! 👋</h1>
+                        <h1>Welcome Back, Rahul! 👋</h1>
                         <p className="welcome-subtitle">
                             Ready to learn something new and build something great?
                         </p>
