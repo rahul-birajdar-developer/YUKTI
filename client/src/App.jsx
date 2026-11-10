@@ -1,12 +1,9 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import "./App.css";
-
 import SideBar from "./component/layout/Sidebar";
 import Navbar from "./component/layout/Navbar";
-
-import Dashboard from "./component/pages/dashboard";
+import Dashboard from "./component/pages/Dashboard";
 import CodingRoom from "./component/pages/CodingRoom";
 import PracticeRoom from "./component/pages/PracticeRoom";
 import MockInterview from "./component/pages/MockInterview";
