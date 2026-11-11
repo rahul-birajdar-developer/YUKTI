@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import SideBar from "./component/layout/Sidebar";
@@ -15,12 +14,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-layout">
-
         {/* <SideBar /> */}
-
         <main className="main-content">
           {/* <Navbar />
-
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/coding-rooms" element={<CodingRoom />} />
@@ -30,7 +26,6 @@ function App() {
           </Routes> */}
           {/* <RegisterFrom /> */}
           <LoginFrom />
-
         </main>
       </div>
     </BrowserRouter>
