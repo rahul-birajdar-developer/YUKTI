@@ -8,16 +8,18 @@ import CodingRoom from "./component/pages/CodingRoom";
 import PracticeRoom from "./component/pages/PracticeRoom";
 import MockInterview from "./component/pages/MockInterview";
 import MyProgress from "./component/pages/MyProgress";
+import RegisterFrom from "./component/pages/RegisterFrom";
+import LoginFrom from "./component/pages/LoginFrom";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app-layout">
 
-        <SideBar />
+        {/* <SideBar /> */}
 
         <main className="main-content">
-          <Navbar />
+          {/* <Navbar />
 
           <Routes>
             <Route path="/" element={<Dashboard />} />
@@ -25,7 +27,9 @@ function App() {
             <Route path="/practice" element={<PracticeRoom />} />
             <Route path="/interviews" element={<MockInterview />} />
             <Route path="/progress" element={<MyProgress />} />
-          </Routes>
+          </Routes> */}
+          {/* <RegisterFrom /> */}
+          <LoginFrom />
 
         </main>
       </div>
