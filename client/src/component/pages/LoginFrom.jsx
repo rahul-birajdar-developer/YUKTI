@@ -58,12 +58,10 @@ function LoginForm() {
             {/* RIGHT LOGIN FORM */}
             <section className={styles.formPanel}>
                 <div className={styles.formContent}>
-
                     <div className={styles.mobileBrand}>
                         <span className={styles.brandIcon}>Y</span>
                         YUKTI
                     </div>
-
                     <div className={styles.heading}>
                         <p className={styles.label}>WELCOME BACK</p>
                         <h2>Login to your account</h2>
@@ -71,7 +69,6 @@ function LoginForm() {
                             Enter your details to continue learning.
                         </p>
                     </div>
-
                     <form onSubmit={handleSubmit}>
                         <div className={styles.formGroup}>
                             <label htmlFor="email">Email Address</label>
@@ -85,7 +82,6 @@ function LoginForm() {
                                 required
                             />
                         </div>
-
                         <div className={styles.formGroup}>
                             <label htmlFor="password">Password</label>
                             <input
@@ -98,27 +94,22 @@ function LoginForm() {
                                 required
                             />
                         </div>
-
                         <div className={styles.options}>
                             <Link to="/forgot-password">
                                 Forgot password?
                             </Link>
                         </div>
-
                         <button type="submit" className={styles.button}>
                             Login
                         </button>
                     </form>
-
                     <p className={styles.footer}>
                         Don't have an account?
                         <Link to="/register"> Create Account</Link>
                     </p>
-
                     <p className={styles.tagline}>
                         Think. Code. Collaborate.
                     </p>
-
                 </div>
             </section>
         </div>

@@ -1,8 +1,225 @@
-.registrationForm {
+.authLayout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+}
+
+/* LEFT IMAGE PANEL */
+
+.visualPanel {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #19172e;
+}
+
+.visualImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visualOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(15, 23, 46, 0.45),
+            rgba(25, 23, 46, 0.15) 100%);
+}
+
+.visualContent {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    min-height: 100vh;
+    padding: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.brandIcon {
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+    width: 48px;
+    height: 48px;
+    background: #7057e8;
+    border-radius: 12px;
+    font-size: 27px;
+}
+
+.visualText {
+    max-width: 480px;
+    margin-bottom: 70px;
+}
+
+.visualText h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.visualText p {
+    color: #d1cde9;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.visualFooter {
+    color: #c5c1dc;
+    font-size: 13px;
+}
+
+/* RIGHT FORM PANEL */
+
+
+.formPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.heading {
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 28px;
+}
+
+.label {
+    color: #7057e8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.mobileBrand {
+    display: none;
+}
+
+.formPanel form {
+    width: 100%;
+    max-width: 460px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    font-weight: 600;
+}
+
+.formGroup input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #dedeea;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.formGroup input:focus {
+    border-color: #6951e8;
+    box-shadow: 0 0 0 3px rgba(105, 81, 232, 0.12);
+}
+
+.errorMessage {
+    color: #dc2626;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.successMessage {
+    color: #15803d;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #6851e8;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #5740d4;
+}
+
+.footer {
+    margin-top: 24px;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .authLayout {
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .visualContent {
+        padding: 30px;
+    }
+
+    .visualText h1 {
+        font-size: 34px;
+    }
+
+    .formPanel {
+        padding: 30px 22px;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 650px) {
+    .authLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .visualPanel {
+        display: none;
+    }
+
+    .formPanel {
+        min-height: 100vh;
+        padding: 28px 20px;
+    }
+
+    .mobileBrand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 35px;
+        color: #19172e;
+        font-size: 23px;
+        font-weight: 800;
+    }
 }
