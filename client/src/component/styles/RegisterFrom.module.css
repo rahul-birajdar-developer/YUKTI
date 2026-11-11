@@ -110,6 +110,12 @@
     letter-spacing: 1.5px;
 }
 
+.heading h2 {
+    color: #19172e;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
 .mobileBrand {
     display: none;
 }
