@@ -1,10 +1,9 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/LoginFrom.module.css";
 import authImage from "../../assets/YUKTI_ Think, Code, Collaborate.png";
 
-function Login() {
+function LoginForm() {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -126,4 +125,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default LoginForm;

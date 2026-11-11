@@ -2,16 +2,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/LoginFrom.module.css";
+import authImage from "../../assets/YUKTI_ Think, Code, Collaborate.png";
 
-function Register() {
+function RegisterForm() {
     const [formData, setFormData] = useState({
-        name: "",
         email: "",
         password: "",
-        confirmPassword: "",
     });
-
-    const [message, setMessage] = useState("");
 
     const handleChange = (e) => {
         setFormData({
@@ -22,34 +19,50 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if (formData.password.length < 8) {
-            setMessage("Password must contain at least 8 characters.");
-            return;
-        }
-
-        if (formData.password !== formData.confirmPassword) {
-            setMessage("Passwords do not match.");
-            return;
-        }
-
-        setMessage("Registration form validated. Backend connection is next.");
+        console.log("Login form:", formData);
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.card}>
+        <div className={styles.authLayout}>
 
-                <Link to="/register" className={styles.brand}>
-                    <span className={styles.brandIcon}>Y</span>
-                    YUKTI
-                </Link>
+            {/* LEFT IMAGE SECTION */}
+            <section className={styles.visualPanel}>
+                <img
+                    src={authImage}
+                    alt="Students collaborating on programming"
+                    className={styles.visualImage}
+                />
 
+                <div className={styles.visualOverlay}></div>
+
+                {/* <div className={styles.visualContent}>
+                    <div className={styles.brand}>
+                        <span className={styles.brandIcon}>Y</span>
+                        YUKTI
+                    </div>
+
+                    <div className={styles.visualText}>
+                        <h1>Think. Code. Collaborate.</h1>
+                        <p>
+                            Improve your coding skills, solve challenging
+                            problems and learn together with other students.
+                            Your coding journey starts here.
+                        </p>
+                    </div>
+
+                    <p className={styles.visualFooter}>
+                        © 2026 YUKTI. Learn something new every day.
+                    </p>
+                </div> */}
+            </section>
+
+            {/* RIGHT LOGIN FORM */}
+            <section className={styles.formPanel}>
                 <div className={styles.heading}>
                     <p className={styles.label}>JOIN YUKTI</p>
-                    <h1>Create your account</h1>
+                    <h2>Create your account</h2>
                     <p className={styles.subtitle}>
-                        Start learning, coding and collaborating.
+                        Start your coding and learning journey today.
                     </p>
                 </div>
 
@@ -58,8 +71,8 @@ function Register() {
                         <label htmlFor="name">Full Name</label>
                         <input
                             id="name"
-                            type="text"
                             name="name"
+                            type="text"
                             placeholder="Enter your full name"
                             value={formData.name}
                             onChange={handleChange}
@@ -71,8 +84,8 @@ function Register() {
                         <label htmlFor="email">Email Address</label>
                         <input
                             id="email"
-                            type="email"
                             name="email"
+                            type="email"
                             placeholder="Enter your email"
                             value={formData.email}
                             onChange={handleChange}
@@ -84,8 +97,8 @@ function Register() {
                         <label htmlFor="password">Password</label>
                         <input
                             id="password"
-                            type="password"
                             name="password"
+                            type="password"
                             placeholder="Minimum 8 characters"
                             value={formData.password}
                             onChange={handleChange}
@@ -98,9 +111,9 @@ function Register() {
                         <label htmlFor="confirmPassword">Confirm Password</label>
                         <input
                             id="confirmPassword"
-                            type="password"
                             name="confirmPassword"
-                            placeholder="Re-enter your password"
+                            type="password"
+                            placeholder="Confirm your password"
                             value={formData.confirmPassword}
                             onChange={handleChange}
                             required
@@ -110,24 +123,15 @@ function Register() {
                     <button type="submit" className={styles.button}>
                         Create Account
                     </button>
-
-                    {message && (
-                        <p className={styles.message}>{message}</p>
-                    )}
                 </form>
 
                 <p className={styles.footer}>
                     Already have an account?
                     <Link to="/login"> Login</Link>
                 </p>
-
-                <p className={styles.tagline}>
-                    Think. Code. Collaborate.
-                </p>
-
-            </div>
+            </section>
         </div>
     );
 }
 
-export default Register;
+export default RegisterForm;

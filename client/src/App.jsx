@@ -7,8 +7,8 @@ import CodingRoom from "./component/pages/CodingRoom";
 import PracticeRoom from "./component/pages/PracticeRoom";
 import MockInterview from "./component/pages/MockInterview";
 import MyProgress from "./component/pages/MyProgress";
-import RegisterFrom from "./component/pages/RegisterFrom";
-import LoginFrom from "./component/pages/LoginFrom";
+import RegisterForm from "./component/pages/RegisterFrom";
+import LoginForm from "./component/pages/LoginFrom";
 
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
             <Route path="/interviews" element={<MockInterview />} />
             <Route path="/progress" element={<MyProgress />} />
           </Routes> */}
-          {/* <RegisterFrom /> */}
-          <LoginFrom />
+          <RegisterForm />
+          <LoginForm />
         </main>
       </div>
     </BrowserRouter>
