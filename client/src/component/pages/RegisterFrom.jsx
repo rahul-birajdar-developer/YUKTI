@@ -64,7 +64,6 @@ function RegisterForm() {
                     alt="YUKTI coding workspace"
                     className={styles.visualImage}
                 />
-
                 <div className={styles.visualOverlay}></div>
             </section>
 

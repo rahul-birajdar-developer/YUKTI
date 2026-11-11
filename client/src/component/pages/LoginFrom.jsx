@@ -39,7 +39,6 @@ function LoginForm() {
                         <span className={styles.brandIcon}>Y</span>
                         YUKTI
                     </div>
-
                     <div className={styles.visualText}>
                         <h1>Think. Code. Collaborate.</h1>
                         <p>
@@ -48,7 +47,6 @@ function LoginForm() {
                             Your coding journey starts here.
                         </p>
                     </div>
-
                     <p className={styles.visualFooter}>
                         © 2026 YUKTI. Learn something new every day.
                     </p>
