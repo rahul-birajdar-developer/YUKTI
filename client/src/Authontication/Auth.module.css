@@ -602,6 +602,7 @@
 
     .leftPanel {
         min-height: auto;
+        display: none;
         padding: 25px 20px;
     }
 
