@@ -1,0 +1,234 @@
+.profilePage {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.pageHeader h1 {
+    font-size: 27px;
+    color: #202036;
+    margin: 0 0 7px;
+}
+
+.pageHeader p {
+    color: #77778b;
+    margin: 0;
+    font-size: 14px;
+}
+
+.editButton,
+.saveButton {
+    background: #6851e8;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.editButton:hover,
+.saveButton:hover {
+    background: #5740d4;
+}
+
+.profileCard {
+    background: white;
+    border: 1px solid #e9e8f0;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(30, 25, 70, 0.04);
+}
+
+.profileTop {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7863ed, #4935b8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.profileIdentity h2 {
+    margin: 0 0 5px;
+    color: #25243a;
+}
+
+.profileIdentity p {
+    color: #858397;
+    margin: 0 0 10px;
+}
+
+.skillBadge {
+    background: #eeeaff;
+    color: #6951e8;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profileCard h3 {
+    color: #29283d;
+    font-size: 17px;
+    margin: 22px 0;
+}
+
+.divider {
+    height: 1px;
+    background: #eeeeF3;
+    margin: 25px 0;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    font-size: 13px;
+    color: #55546a;
+    font-weight: 600;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #e3e2eb;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    color: #333247;
+    background: #fff;
+    font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #6851e8;
+    box-shadow: 0 0 0 3px rgba(104, 81, 232, 0.1);
+}
+
+.formGroup input:disabled,
+.formGroup select:disabled,
+.formGroup textarea:disabled {
+    background: #f8f7fb;
+    color: #55546a;
+    cursor: default;
+}
+
+.languageList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.languageOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f6f4ff;
+    color: #5143a8;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.languageOption input {
+    accent-color: #6851e8;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.cancelButton {
+    padding: 12px 22px;
+    border: 1px solid #dedce8;
+    background: white;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.successMessage {
+    padding: 13px 16px;
+    border-radius: 9px;
+    background: #eaf8ee;
+    color: #18753a;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .profilePage {
+        padding: 18px;
+    }
+
+    .pageHeader {
+        align-items: flex-start;
+    }
+
+    .pageHeader h1 {
+        font-size: 23px;
+    }
+
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .profileCard {
+        padding: 20px;
+    }
+
+    .avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 420px) {
+    .pageHeader {
+        flex-direction: column;
+    }
+
+    .profileTop {
+        align-items: flex-start;
+        gap: 14px;
+    }
+}

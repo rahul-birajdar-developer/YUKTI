@@ -8,6 +8,7 @@ const SideBar = () => {
         { name: "Practice", path: "/practice", icon: "⌘" },
         { name: "Mock Interviews", path: "/interviews", icon: "◷" },
         { name: "My Progress", path: "/progress", icon: "▥" },
+        { name: "Profile", path: "/profile", icon: "⚙" },
     ];
 
     return (
