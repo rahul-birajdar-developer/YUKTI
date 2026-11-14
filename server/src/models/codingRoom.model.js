@@ -1,4 +1,10 @@
 import mongoose from 'mongoose';
+import crypto from "node:crypto";
+
+const roomCode = crypto.randomBytes(4)
+    .toString("hex")
+    .slice(0, 6)
+    .toUpperCase();
 
 const codingRoomSchema = new mongoose.Schema(
     {
@@ -11,18 +17,29 @@ const codingRoomSchema = new mongoose.Schema(
         },
         language: {
             type: String,
+            enum: ["javascript", "python", "java", "cpp"],
+            default: "javascript",
             required: true,
-            trim: true,
-            minlength: 2,
-            maxlength: 30,
         },
         roomCode: {
             type: String,
             required: true,
             unique: true,
-            trim: true,
-            minlength: 6,
-            maxlength: 6,
+            default: () =>
+                crypto.randomBytes(4)
+                    .toString("hex")
+                    .slice(0, 6)
+                    .toUpperCase(),
+        },
+        privacy: {
+            type: String,
+            enum: ["public", "private", "closed"],
+            default: "public",
+        },
+        status: {
+            type: String,
+            enum: ["active", "inactive"],
+            default: "active",
         },
         createdBy: {
             type: mongoose.Schema.Types.ObjectId,
