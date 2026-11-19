@@ -50,6 +50,9 @@ const userSchema = new mongoose.Schema(
             enum: ["student", "faculty", "admin"],
             default: "student",
         },
+        refreshToken: {
+            type: String,
+        },
     },
     {
         // Automatically creates createdAt and updatedAt fields.
