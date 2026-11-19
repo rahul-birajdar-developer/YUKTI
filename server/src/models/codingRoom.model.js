@@ -48,7 +48,7 @@ const codingRoomSchema = new mongoose.Schema(
         // Current room status
         status: {
             type: String,
-            enum: ["active", "inactive"],
+            enum: ["active", "inactive", "closed"],
             default: "active",
         },
 
